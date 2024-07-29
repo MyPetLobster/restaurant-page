@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Restaurant Page for Odin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyPetLobster/restaurant-page.git"
+  },
+  "keywords": [
+    "restaurant",
+    "webpack",
+    "odin",
+    "project"
+  ],
+  "author": "Cory Suzuki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyPetLobster/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/MyPetLobster/restaurant-page#readme",
+  "private": true
+}
