@@ -22,5 +22,9 @@
     "url": "https://github.com/MyPetLobster/restaurant-page/issues"
   },
   "homepage": "https://github.com/MyPetLobster/restaurant-page#readme",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
 }
