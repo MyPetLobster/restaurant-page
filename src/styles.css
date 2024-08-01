@@ -51,24 +51,54 @@ a {
 
 /* ---- GENERAL/TOP LEVEL ---- */
 body {
-    max-height: 100%;
+    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     font-size: 16px;
     background-color: var(--primary-light);
-    overflow: hidden;
+    overflow: auto;
 }
-
 #content {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100vh;
-    width: 100%;
+    gap: 1rem;
     overflow: hidden;
 }
+
+
+/* ---- BUTTONS ---- */
+button {
+    padding: 0.2em 1.5em;
+    border: 1px solid var(--primary-dark);
+    border-radius: 0.5rem;
+    color: var(--primary-dark);
+    background-color: transparent;
+    font-size: 1em;
+    transition: 250ms;
+    cursor: pointer;
+}
+@media (hover: hover) {
+    button:hover {
+        color: var(--primary-light);
+        background-color: var(--primary-dark);
+        box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.196);
+        transform: scale(1.05);
+    }
+}
+
+button:active {
+    color: var(--primary-light);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.444);
+    transform: scale(0.95);
+}
+
+
+/* ---- HEADER ---- */
 header {
     height: 100%;
     padding: 1rem;
@@ -77,24 +107,111 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
 }
 .heading-hero > img {
     max-width: 300px;
 }
 
-/* ---- Dish Carousel ---- */
+
+/* ---- DISH CAROUSEL ---- */
 .dish-carousel-div {
+    position: relative;
+    height: 300px;
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar; 
+    overflow-x: scroll;
+    background: transparent;
+    
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.dish-carousel-div::-webkit-scrollbar {
+    display: none;
+}
+
 .dish-div {
-    flex: 0 0 auto; /* don't grow, don't shrink, don't allow overflow */
-    height: 300px;
+    position: relative;
+    height: 100%;
     width: 300px;
+    margin-right: 10px;
+    flex: 0 0 auto;
+    border: 1px solid var(--primary-dark); 
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.dish-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.dish-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--primary-light);
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+.dish-div.flipped .dish-info {
+    transform: rotateY(0);
+}
+.dish-div.flipped .dish-image {
+    transform: rotateY(180deg);
+}
+
+
+/* ---- MAIN OPTS GRID ---- */
+.main-options {
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.option {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8); /* Temporary background color */
+    color: var(--primary-dark);
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+.option:hover {
+    background: rgba(255, 255, 255, 1); /* Change this as needed */
+    transform: scale(1.05);
+}
+
+/* ---- FOOTER ---- */
+.footer {
+    margin-top: auto;
+    padding: 1rem;
+}
+.footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+.footer img {
+    width: 24px;
+    margin-left: 8px;
 }

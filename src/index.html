@@ -89,5 +89,12 @@
             </a>
         </div>
     </div>
+    <script>
+    document.querySelectorAll('.dish-div').forEach(div => {
+        div.addEventListener('click', () => {
+            div.classList.toggle('flipped');
+        });
+    });
+    </script>
 </body>
 </html>
