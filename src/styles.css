@@ -172,6 +172,8 @@ header {
 }
 .dish-div.flipped .dish-image {
     transform: rotateY(180deg);
+    transition: 1000ms;
+    opacity:0;
 }
 
 
