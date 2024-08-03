@@ -1,6 +1,6 @@
 import './styles.css';
-import shoyuRamen from './images/shoyu-ramen.jpg';
-import suzukiyaLogo from './images/ramen-suzukiya-logo.png';
+import shoyuRamen from './images/dishes/shoyu-ramen.jpg';
+import suzukiyaLogo from './images/misc/ramen-suzukiya-logo.png';
 
 document.addEventListener('DOMContentLoaded', () => {
     const img = document.createElement('img');
