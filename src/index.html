@@ -73,8 +73,11 @@
     </div>
     <script>
         document.querySelectorAll('.dish-div').forEach(div => {
-            div.addEventListener('click', () => {
-                div.classList.toggle('flipped');
+            div.addEventListener('mouseover', () => {
+                div.classList.add('flipped');
+                div.addEventListener('mouseleave', () => {
+                    div.classList.remove('flipped');
+                });
             });
         });
     </script>
