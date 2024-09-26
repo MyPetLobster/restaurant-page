@@ -74,9 +74,9 @@ body {
 /* ---- BUTTONS ---- */
 button {
     padding: 0.2em 1.5em;
-    border: 1px solid var(--primary-dark);
+    border: 1px solid var(--primary-light);
     border-radius: 0.5rem;
-    color: var(--primary-dark);
+    color: var(--primary-light);
     background-color: transparent;
     font-size: 1em;
     transition: 250ms;
@@ -84,15 +84,15 @@ button {
 }
 @media (hover: hover) {
     button:hover {
-        color: var(--primary-light);
-        background-color: var(--primary-dark);
+        color: var(--primary-dark);
+        background-color: var(--primary-light);
         box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.196);
         transform: scale(1.05);
     }
 }
 
 button:active {
-    color: var(--primary-light);
+    color: var(--primary-dark);
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.444);
     transform: scale(0.95);
 }
@@ -167,6 +167,10 @@ header {
     backface-visibility: hidden;
     transition: transform 0.5s;
 }
+.dish-info p {
+    padding: 0.5rem;
+    text-align: center;
+}
 .dish-div.flipped .dish-info {
     transform: rotateY(0);
 }
@@ -197,8 +201,7 @@ header {
     transition: background 0.3s, transform 0.3s;
 }
 .option:hover {
-    background: rgba(255, 255, 255, 1); /* Change this as needed */
-    transform: scale(1.05);
+    background: rgb(187, 182, 182); /* Change this as needed */
 }
 
 /* ---- FOOTER ---- */
