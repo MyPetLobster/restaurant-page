@@ -82,6 +82,14 @@ button {
     transition: 250ms;
     cursor: pointer;
 }
+.nav-button {
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+}
+.nav-button:hover {
+    color: var(--primary-light);
+    background-color: var(--primary-dark);
+}
 @media (hover: hover) {
     button:hover {
         color: var(--primary-dark);
